@@ -91,7 +91,7 @@ function App() {
 }
 
 const Header = () => (
-	<div className="resume-header">
+	<div className="header">
 		<div className="left-side">
 			<h2 className="name">Nick Roberts</h2>
 			<a className="website" href="https://meadowlab.io">
@@ -124,8 +124,8 @@ const Section = ({ title, items }) => (
 
 const Item = ({ item }) => (
 	<div className="item">
-		<div className="header">
-			<div className="title">{item.title}</div>
+		<div className="item-header">
+			<div className="item-title">{item.title}</div>
 			<div className="secondary">{item.secondary}</div>
 			<div className="date">{item.date}</div>
 		</div>

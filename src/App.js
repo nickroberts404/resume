@@ -4,7 +4,7 @@ const education = [
 	{
 		title: 'The University of Texas',
 		secondary: 'Austin, TX',
-		date: 'Spring 2016',
+		date: 'Fall 2012 - Spring 2016',
 		details: [
 			'B.S.A in Computer Science',
 			'Relevant Coursework: Software Engineering, Info Retrieval and Web Search, Data Management',
@@ -54,7 +54,7 @@ const projects = [
 			'Built initial coffee bean storefront in 2 months',
 			"Used React for the client and admin sites, Express for the API, and Stripe's API for payments",
 		],
-		link: '',
+		link: 'google.com',
 	},
 	{
 		title: '@react-midi',
@@ -64,7 +64,7 @@ const projects = [
 			'Built initial coffee bean storefront in 2 months',
 			"Used React for the client and admin sites, Express for the API, and Stripe's API for payments",
 		],
-		link: '',
+		link: 'google.com',
 	},
 	{
 		title: 'Patterning Clone',
@@ -74,7 +74,7 @@ const projects = [
 			'Built initial coffee bean storefront in 2 months',
 			"Used React for the client and admin sites, Express for the API, and Stripe's API for payments",
 		],
-		link: '',
+		link: 'google.com',
 	},
 ];
 
@@ -94,19 +94,19 @@ const Header = () => (
 	<div className="header">
 		<div className="left-side">
 			<h2 className="name">Nick Roberts</h2>
-			<a className="website" href="https://meadowlab.io">
+			<a className="website contact" href="https://meadowlab.io">
 				meadowlab.io
 			</a>
-			<a className="website" href="https://github.com/nickroberts404">
+			<a className="website contact" href="https://github.com/nickroberts404">
 				github.com/nickroberts404
 			</a>
 		</div>
 		<div className="right-side">
-			<a className="email" href="mailto:nickroberts404@gmail.com">
+			<a className="email contact" href="mailto:nickroberts404@gmail.com">
 				nickroberts404@gmail.com
 			</a>
-			<div className="phone">512-788-3156</div>
-			<div className="location">Austin, TX</div>
+			<div className="phone contact">512-788-3156</div>
+			<div className="location contact">Austin, TX</div>
 		</div>
 	</div>
 );
@@ -125,7 +125,9 @@ const Section = ({ title, items }) => (
 const Item = ({ item }) => (
 	<div className="item">
 		<div className="item-header">
-			<div className="item-title">{item.title}</div>
+			<a className="item-title" href={item.link || null}>
+				{item.title}
+			</a>
 			<div className="secondary">{item.secondary}</div>
 			<div className="date">{item.date}</div>
 		</div>

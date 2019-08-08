@@ -16,11 +16,12 @@ const experience = [
 	{
 		title: 'StreamMe',
 		secondary: 'Austin, TX',
-		subtitle: 'Software Engineer',
+		subtitle: 'Front End Engineer',
 		date: 'April 2017 - August 2018',
 		details: [
-			"Worked on a strong team of 5 engineers building the next iteration of Weebly's drag n' drop website editor",
-			'Worked with PHP and Backbone.js to make the editor more secure and responsive',
+			'Collaborated closely with a team of 10 engineers to build and maintain a video streaming platform.',
+			'Led development of greenfield project "Communities" to build a more inclusive environment for streamers.',
+			'Used React and Flux to develop and enhance the UX/UI for an isomorphic web experience, focusing on a realtime chat component and helpful style guide.',
 		],
 	},
 	{
@@ -29,8 +30,8 @@ const experience = [
 		subtitle: 'Freelance Software Engineer',
 		date: 'November 2016 - January 2017',
 		details: [
-			'Built initial coffee bean storefront in 2 months',
-			"Used React for the client and admin sites, Express for the API, and Stripe's API for payments",
+			'Built and deployed early-stage coffee bean storefront in 2 months',
+			"Used React and Redux to build out the client and admin sites, Express for the API, and Stripe's API for payments",
 		],
 	},
 	{
@@ -47,34 +48,41 @@ const experience = [
 
 const projects = [
 	{
-		title: 'Daily Journal',
-		secondary: 'Austin, TX',
-		date: 'Spring 2016',
+		title: 'PlaceList',
+		secondary: 'Express, GraphQL, React, Google Maps API',
+		date: 'July 2019',
+		details: ['A simple app for creating "playlists" of places', 'Worj'],
+		link: 'https://placelist.casa',
+	},
+	{
+		title: 'Groovin',
+		secondary: 'React, D3',
+		date: 'June 2019',
 		details: [
-			'Built initial coffee bean storefront in 2 months',
-			"Used React for the client and admin sites, Express for the API, and Stripe's API for payments",
+			'A circular 8-part drum machine that outputs MIDI note/velocity in addition to playing samples through Web Audio.',
+			'Built to test capabilities of @react-midi, can receive as well as send MIDI clock and transport messages.',
 		],
-		link: 'google.com',
+		link: 'https://groovin.casa',
 	},
 	{
 		title: '@react-midi',
-		secondary: 'Austin, TX',
-		date: 'Spring 2016',
+		secondary: 'React, HTML5 ',
+		date: 'April 2019',
 		details: [
 			'Built initial coffee bean storefront in 2 months',
 			"Used React for the client and admin sites, Express for the API, and Stripe's API for payments",
 		],
-		link: 'google.com',
+		link: 'https://www.npmjs.com/package/@react-midi/hooks',
 	},
 	{
-		title: 'Patterning Clone',
-		secondary: 'Austin, TX',
-		date: 'Spring 2016',
+		title: 'Daily Journal',
+		secondary: 'React, Redux, Local Storage',
+		date: 'March 2019',
 		details: [
 			'Built initial coffee bean storefront in 2 months',
 			"Used React for the client and admin sites, Express for the API, and Stripe's API for payments",
 		],
-		link: 'google.com',
+		link: 'https://dailyjournal.me/',
 	},
 ];
 
@@ -145,8 +153,9 @@ const Item = ({ item }) => (
 const SkillSection = () => (
 	<div className="section">
 		<div className="section-title">Technical Skills</div>
-		<div>
-			JavaScript, Python, React, Express, Mocha, ES6, MongoDB, D3, Sass, GIS, Git, HTML5/CSS3
+		<div className="details">
+			JavaScript, Python, React, Express, ES6, GraphQL, MongoDB, D3, Sass, GIS, Git,
+			HTML5/CSS3
 		</div>
 	</div>
 );

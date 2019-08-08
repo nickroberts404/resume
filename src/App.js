@@ -19,9 +19,9 @@ const experience = [
 		subtitle: 'Front End Engineer',
 		date: 'April 2017 - August 2018',
 		details: [
-			'Collaborated closely with a team of 10 engineers to build and maintain a video streaming platform.',
-			'Led development of greenfield project "Communities" to build a more inclusive environment for streamers.',
-			'Used React and Flux to develop and enhance the UX/UI for an isomorphic web experience, focusing on a realtime chat component and helpful style guide.',
+			'Collaborated closely with a team of 10 engineers to build and maintain a video streaming platform',
+			'Led development of greenfield project "Communities" to build a more inclusive environment for streamers',
+			'Used React and Flux to develop and enhance the UX/UI for an isomorphic web app, focusing on a realtime chat component and helpful style guide',
 		],
 	},
 	{
@@ -40,8 +40,8 @@ const experience = [
 		subtitle: 'Software Engineer Intern',
 		date: 'June 2015-August 2015',
 		details: [
-			"Worked on a strong team of 5 engineers building the next iteration of Weebly's drag n' drop website editor",
-			'Worked with PHP and Backbone.js to make the editor more secure and responsive',
+			"Worked on the drag n' drop team to build a more secure and responsive website creator using PHP and Backbone.js",
+			'Migrated the website editor to an iframe for security, focusing personally on inter-window communication',
 		],
 	},
 ];
@@ -51,7 +51,10 @@ const projects = [
 		title: 'PlaceList',
 		secondary: 'Express, GraphQL, React, Google Maps API',
 		date: 'July 2019',
-		details: ['A simple app for creating "playlists" of places', 'Worj'],
+		details: [
+			'A simple app for creating and sharing "playlists" of places, using Google\'s Places API for location data',
+			'Server authenticates with Facebook credentials and provides a GraphQL interface for client using Apollo',
+		],
 		link: 'https://placelist.casa',
 	},
 	{
@@ -59,18 +62,18 @@ const projects = [
 		secondary: 'React, D3',
 		date: 'June 2019',
 		details: [
-			'A circular 8-part drum machine that outputs MIDI note/velocity in addition to playing samples through Web Audio.',
-			'Built to test capabilities of @react-midi, can receive as well as send MIDI clock and transport messages.',
+			'A circular 8-part drum machine that outputs MIDI note/velocity in addition to playing samples through Web Audio',
+			'Built to test capabilities of @react-midi, can receive as well as send MIDI clock and transport messages',
 		],
 		link: 'https://groovin.casa',
 	},
 	{
 		title: '@react-midi',
-		secondary: 'React, HTML5 ',
+		secondary: 'React',
 		date: 'April 2019',
 		details: [
-			'Built initial coffee bean storefront in 2 months',
-			"Used React for the client and admin sites, Express for the API, and Stripe's API for payments",
+			'A library of hooks and components for working with MIDI in React, used for communicating with music devices',
+			'Encourages a more tactile web experience by making it easy to accept input from knobs, sliders, and buttons',
 		],
 		link: 'https://www.npmjs.com/package/@react-midi/hooks',
 	},
@@ -79,8 +82,8 @@ const projects = [
 		secondary: 'React, Redux, Local Storage',
 		date: 'March 2019',
 		details: [
-			'Built initial coffee bean storefront in 2 months',
-			"Used React for the client and admin sites, Express for the API, and Stripe's API for payments",
+			"A journal for keeping short summaries of day's activities used for personal reflection",
+			"Implements drag n' drop for organization and a Github inspired contribution calendar for motivation/navigation",
 		],
 		link: 'https://dailyjournal.me/',
 	},
@@ -154,7 +157,7 @@ const SkillSection = () => (
 	<div className="section">
 		<div className="section-title">Technical Skills</div>
 		<div className="details">
-			JavaScript, Python, React, Express, ES6, GraphQL, MongoDB, D3, Sass, GIS, Git,
+			JavaScript, Python, React, Redux, Express, ES6, GraphQL, MongoDB, D3, Sass, GIS, Git,
 			HTML5/CSS3
 		</div>
 	</div>

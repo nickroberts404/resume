@@ -67,6 +67,9 @@ body {
 	text-decoration: none;
 	color: inherit;
 }
+.item-title.link:hover {
+	color: rgb(157, 80, 187);
+}
 .secondary {
 	flex-grow: 1;
 	opacity: 0.9;

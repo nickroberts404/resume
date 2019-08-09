@@ -7,7 +7,7 @@ const education = [
 		date: 'Fall 2012 - Spring 2016',
 		details: [
 			'B.S.A in Computer Science',
-			'Relevant Coursework: Software Engineering, Info Retrieval and Web Search, Data Management',
+			'Relevant Coursework: Software Engineering, Data Management, Info Retrieval and Web Search',
 		],
 	},
 ];
@@ -21,7 +21,7 @@ const experience = [
 		details: [
 			'Collaborated closely with a team of 10 engineers to build and maintain a video streaming platform',
 			'Led development of greenfield project "Communities" to build a more inclusive environment for streamers',
-			'Used React and Flux to develop and enhance the UX/UI for an isomorphic web app, focusing on a realtime chat component and helpful style guide',
+			'Used React and Flux to develop and enhance the UX/UI for an isomorphic web app, focusing on a realtime chat component, helpful style guide, and GDPR compliance',
 		],
 	},
 	{
@@ -30,7 +30,7 @@ const experience = [
 		subtitle: 'Freelance Software Engineer',
 		date: 'November 2016 - January 2017',
 		details: [
-			'Built and deployed early-stage coffee bean storefront in 2 months',
+			'Built and deployed early-stage coffee bean storefront in 2 months, including an inventory management system',
 			"Used React and Redux to build out the client and admin sites, Express for the API, and Stripe's API for payments",
 		],
 	},
@@ -41,7 +41,7 @@ const experience = [
 		date: 'June 2015-August 2015',
 		details: [
 			"Worked on the drag n' drop team to build a more secure and responsive website creator using PHP and Backbone.js",
-			'Migrated the website editor to an iframe for security, focusing personally on inter-window communication',
+			'Migrated the editor to an iframe to prevent code injection, focusing personally on inter-window communication',
 		],
 	},
 ];
@@ -53,7 +53,7 @@ const projects = [
 		date: 'July 2019',
 		details: [
 			'A simple app for creating and sharing "playlists" of places, using Google\'s Places API for location data',
-			'Server authenticates with Facebook credentials and provides a GraphQL interface for client using Apollo',
+			'Server authenticates with Facebook credentials and uses Apollo to provide a GraphQL interface for client',
 		],
 		link: 'https://placelist.casa',
 	},
@@ -136,9 +136,14 @@ const Section = ({ title, items }) => (
 const Item = ({ item }) => (
 	<div className="item">
 		<div className="item-header">
-			<a className="item-title" href={item.link || null}>
-				{item.title}
-			</a>
+			{item.link ? (
+				<a className="item-title link" href={item.link}>
+					{item.title}
+				</a>
+			) : (
+				<a className="item-title">{item.title}</a>
+			)}
+
 			<div className="secondary">{item.secondary}</div>
 			<div className="date">{item.date}</div>
 		</div>
